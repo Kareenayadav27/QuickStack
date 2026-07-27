@@ -8,7 +8,7 @@ export const inngest = new Inngest({ id: "movie-ticket-booking" });
 const syncUserCreation = inngest.createFunction(
     {
         id:'sync-user-from-clerk',
-        triggers:{
+        trigger:{
             event:'clerk/user.created'
         }
     },
@@ -17,7 +17,7 @@ const syncUserCreation = inngest.createFunction(
         const {id,first_name,last_name,email_addresses,image_url} =event.data
         const userData={
             _id:id,
-            email:email.email_addresses[0].email.address,
+            email:email_addresses[0].email.address,
             name:first_name+' '+last_name,
             image:image_url
         }
@@ -29,7 +29,7 @@ const syncUserCreation = inngest.createFunction(
 const syncUserDeletion = inngest.createFunction(
     {
         id:'delete-user-with-clerk',
-        triggers:{
+        trigger:{
             event:'clerk/user.deleted'
         }
     },
@@ -44,7 +44,7 @@ const syncUserDeletion = inngest.createFunction(
 const syncUserUpdation = inngest.createFunction(
     {
         id:'update-user-from-clerk',
-        triggers:{
+        trigger:{
             event:'clerk/user.updated'
         }
     },
