@@ -21,7 +21,7 @@ const syncUserCreation = inngest.createFunction(
             name:first_name+' '+last_name,
             image:image_url
         }
-        onsole.log("User data:", userData);
+        console.log("User data:", userData);
 
     const user = await User.create(userData);
 
