@@ -21,8 +21,12 @@ const syncUserCreation = inngest.createFunction(
             name:first_name+' '+last_name,
             image:image_url
         }
-        await User.create(userData)
-    }
+        onsole.log("User data:", userData);
+
+    const user = await User.create(userData);
+
+    console.log("User created successfully:", user);
+}
 )
 
 // Inngest Function to delete user from database
