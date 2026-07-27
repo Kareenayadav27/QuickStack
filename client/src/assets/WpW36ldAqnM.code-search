@@ -1,0 +1,10 @@
+# Query: WpW36ldAqnM
+# ContextLines: 1
+
+2 results - 1 file
+
+client/src/assets/assets.js:
+  18      {
+  19:       image: "https://img.youtube.com/vi/WpW36ldAqnM/maxresdefault.jpg",
+            videoUrl: "https://www.youtube.com/watch?v=WpW36ldAqnM"
+  21      },
