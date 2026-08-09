@@ -71,7 +71,10 @@ const syncUserUpdation = inngest.createFunction(
 const releaseSeatsAndDeleteBooking=inngest.createFunction(
     {
         id:'release-seats-delete-booking',
-        event:'app/checkpayment',
+        trigger: {
+            event:'app/checkpayment',
+},
+       
     },
     
 
